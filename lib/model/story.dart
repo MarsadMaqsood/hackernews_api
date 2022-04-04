@@ -48,7 +48,7 @@ class Story {
         descendants: json["descendants"] ?? 0,
         score: json["score"],
         title: json["title"],
-        url: json["url"],
+        url: json["url"] ?? 'null',
         kids: json["kids"]?.cast<int>() ?? [],
       );
 }

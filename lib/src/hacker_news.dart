@@ -63,7 +63,7 @@ class HackerNews {
     return http.get(urlForStory(storyId));
   }
 
-  Future<List<http.Response>> _getComments(kidIds) async {
+  Future<List<http.Response>> _getComments(List<dynamic> kidIds) async {
     return Future.wait(kidIds.take(30).map((kidId) {
       return http.get(urlForStory(kidId));
     }));

@@ -10,6 +10,6 @@ void main() {
 
     List<Comment> comment = await news.getComments(story[0].kids);
 
-    print(comment[0].text);
+    print(comment.length);
   });
 }
