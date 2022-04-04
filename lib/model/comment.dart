@@ -1,13 +1,31 @@
 class Comment {
+  ///id
   final int id;
+
+  ///Text of the story
   final String text;
+
+  ///Author
   final String by;
+
+  ///Story type
   final String type;
 
+  ///story parent
   final int parent;
+
+  ///Timestamp of the story
+  ///
+  ///[time] is in unix time
   final int time;
+
+  ///Story is dead or not
   final bool dead;
+
+  ///Story is deleted or not
   final bool deleted;
+
+  ///Kids of the story
   final List<dynamic> kids;
 
   Comment({

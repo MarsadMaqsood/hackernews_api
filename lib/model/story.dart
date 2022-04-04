@@ -1,10 +1,21 @@
 class Story {
   final int id;
+
+  ///Story is deleted or not
   final bool deleted;
+
+  ///Story type
   final String type;
+
+  ///Author
   final String by;
+
+  ///creation time of the story
   final int time;
+
+  ///Story is dead or not
   final bool dead;
+
   final List<dynamic> kids;
   final int descendants;
 

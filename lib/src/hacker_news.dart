@@ -12,11 +12,14 @@ class HackerNews {
     this.newsType = NewsType.topStories,
   });
 
-  ///Provide news type default is
+  ///Specify news type
+  ///[NewsType.topStories] or [NewsType.newStories]
+  ///
+  /// default is
   ///[NewsType.topStories]
   final NewsType newsType;
 
-  ///Function used to access stories and return `List<Story>`
+  ///Function used to access stories which returns `List<Story>`
   Future<List<Story>> getStories() async {
     final List<http.Response> responses = await _getStories();
 
