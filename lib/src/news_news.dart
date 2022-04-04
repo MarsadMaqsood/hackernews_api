@@ -52,7 +52,7 @@ class HackerNews {
         return _getStory(storyId);
       }));
     } else {
-      throw NewsException("Unable to fetch data!");
+      throw NewsException("Unable to fetch data! ${response.statusCode}");
     }
   }
 

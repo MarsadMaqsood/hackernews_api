@@ -1,6 +1,6 @@
 [![Version](https://img.shields.io/pub/v/hackernews_api?color=%2354C92F&logo=dart)](https://pub.dev/packages/hackernews_api/install)
 
-A Flutter package for accessing Hacker News API
+A Flutter package of Hacker News API for accessing top and new stories.
 
 ## ⭐ Installing
 ```
