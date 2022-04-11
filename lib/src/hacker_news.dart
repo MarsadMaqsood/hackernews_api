@@ -13,7 +13,12 @@ class HackerNews {
   });
 
   ///Specify news type
-  ///[NewsType.topStories] or [NewsType.newStories]
+  ///
+  ///[NewsType.topStories]
+  ///[NewsType.askstories]
+  ///[NewsType.newStories]
+  ///[NewsType.showstories]
+  ///[NewsType.jobstories]
   ///
   /// default is
   ///[NewsType.topStories]
