@@ -1,6 +1,6 @@
 name: hackernews_api
 description: A Flutter package of Hacker News API for accessing top and new stories.
-version: 0.0.3
+version: 0.0.4
 homepage: https://github.com/MarsadMaqsood/hackernews_api.git
 
 environment:

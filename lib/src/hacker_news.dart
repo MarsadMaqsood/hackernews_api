@@ -37,6 +37,28 @@ class HackerNews {
     return stories;
   }
 
+  ///Function used to access single story by using storyID
+  Future<Story> getStory(int storyID) async {
+    http.Response response = await _getStory(storyID);
+
+    final json = jsonDecode(response.body);
+
+    return Story.fromJson(json);
+  }
+
+  ///Function used to access list of storyIds
+  Future<List<dynamic>> getStoryIds() async {
+    final response = await http.get(storyUrl(newsType));
+
+    if (response.statusCode == 200) {
+      dynamic storyIds = jsonDecode(response.body);
+
+      return storyIds;
+    } else {
+      throw NewsException("Unable to fetch data! ${response.statusCode}");
+    }
+  }
+
   ///Function used to access story kids and return `List<Comments>`
   Future<List<Comment>> getComments(List<dynamic> kidIds) async {
     final List<http.Response> responses = await _getComments(kidIds);

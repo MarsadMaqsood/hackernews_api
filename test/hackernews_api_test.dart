@@ -12,4 +12,26 @@ void main() {
 
     print(comment.length);
   });
+
+  test('News Ids Fetching Test', () async {
+    HackerNews news = HackerNews(
+      newsType: NewsType.newStories,
+    );
+
+    final result = await news.getStoryIds();
+
+    print(result[0]);
+  });
+
+  test('News Story Fetching using ID Test', () async {
+    HackerNews news = HackerNews(
+      newsType: NewsType.newStories,
+    );
+
+    final storyIds = await news.getStoryIds();
+
+    final newsData = await news.getStory(storyIds[0]);
+
+    print(newsData.title);
+  });
 }

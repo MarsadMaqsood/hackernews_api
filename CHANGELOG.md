@@ -1,3 +1,7 @@
+## 0.0.4 
+
+- Added `getStory()` `getStoryIds()`
+
 ## 0.0.3
 
 - Bug fixes

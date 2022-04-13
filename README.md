@@ -5,7 +5,7 @@ A Flutter package of Hacker News API for accessing top and new stories.
 ## ⭐ Installing
 ```
 dependencies:
-    updater: ^0.0.3
+    updater: ^0.0.4
 ```
 
 ## ⚡ Import 
@@ -23,6 +23,9 @@ newsType → NewsType
 ```dart
 NewsType.topStories
 NewsType.newStories
+NewsType.askStories
+NewsType.showStories
+NewsType.jobStories
 ```
 
 ## 📙 How To Use
@@ -31,6 +34,14 @@ NewsType.newStories
 HackerNews news = HackerNews(
     newsType: NewsType.newStories,
 );
-    
+
+//get stories
 List<Story> story = await news.getStories();
+
+//get List of story ids
+final storyIds = await news.getStoryIds();
+
+
+final newsData = await news.getStory(storyIds[0]);
+
 ```

@@ -5,7 +5,7 @@ enum NewsType {
 
   ///Access latest newStories
   newStories,
-  askstories,
-  showstories,
-  jobstories,
+  askStories,
+  showStories,
+  jobStories,
 }
