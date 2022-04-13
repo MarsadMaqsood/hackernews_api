@@ -15,10 +15,10 @@ class HackerNews {
   ///Specify news type
   ///
   ///[NewsType.topStories]
-  ///[NewsType.askstories]
+  ///[NewsType.askStories]
   ///[NewsType.newStories]
-  ///[NewsType.showstories]
-  ///[NewsType.jobstories]
+  ///[NewsType.showStories]
+  ///[NewsType.jobStories]
   ///
   /// default is
   ///[NewsType.topStories]
