@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hackernews_api/hackernews_api.dart';
 
@@ -10,7 +11,7 @@ void main() {
 
     List<Comment> comment = await news.getComments(story[0].kids);
 
-    print(comment.length);
+    debugPrint(comment.length.toString());
   });
 
   test('News Ids Fetching Test', () async {
@@ -20,7 +21,7 @@ void main() {
 
     final result = await news.getStoryIds();
 
-    print(result[0]);
+    debugPrint(result[0]);
   });
 
   test('News Story Fetching using ID Test', () async {
@@ -32,6 +33,6 @@ void main() {
 
     final newsData = await news.getStory(storyIds[0]);
 
-    print(newsData.title);
+    debugPrint(newsData.title);
   });
 }

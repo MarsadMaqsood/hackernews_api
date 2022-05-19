@@ -86,6 +86,7 @@ class HackerNews {
     }
   }
 
+  ///Function used to access single story by using storyID
   Future<http.Response> _getStory(int storyId) {
     return http.get(urlForStory(storyId));
   }
