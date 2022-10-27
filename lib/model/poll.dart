@@ -1,5 +1,5 @@
 class Poll {
-  ///The item's unique id.
+  ///The item's unique [id].
   final int id;
 
   ///The comment, story or poll text. HTML.

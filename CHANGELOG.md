@@ -1,3 +1,8 @@
+## 0.0.6
+- Updated documentation
+- Updated example
+
+
 ## 0.0.5
 - Updated README.md
 

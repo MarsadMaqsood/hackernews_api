@@ -31,7 +31,7 @@ class Story {
 
   ///The URL of the story.
   ///
-  ///default is `"null"`
+  ///default is `null`
   final String url;
 
   Story({

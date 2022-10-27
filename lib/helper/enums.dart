@@ -5,7 +5,13 @@ enum NewsType {
 
   ///Access latest newStories
   newStories,
+
+  ///Ask HN Stories
   askStories,
+
+  ///Show HN Stories
   showStories,
+
+  ///Job Stories
   jobStories,
 }

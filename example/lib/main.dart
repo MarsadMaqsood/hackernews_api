@@ -8,13 +8,14 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Hacker News Example',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        useMaterial3: true,
       ),
       home: const Home(),
     );
@@ -30,40 +31,50 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   HackerNews news = HackerNews(
-    newsType: NewsType.topStories,
+    newsType: NewsType.newStories,
   );
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Hacker News Example'),
+      ),
       body: SafeArea(
-          child: SingleChildScrollView(
-              child: Column(
+          child: Column(
         children: [
           FutureBuilder(
               future: news.getStories(),
               builder: (context, AsyncSnapshot<List<Story>> snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
-                  return const CircularProgressIndicator();
+                  return const Center(child: CircularProgressIndicator());
                 }
                 if (snapshot.hasError) return Text(snapshot.error.toString());
                 if (!snapshot.hasData) return const Text('No Data');
 
-                return ListView.builder(
-                  itemCount: snapshot.data!.length,
-                  itemBuilder: (context, index) {
-                    var data = snapshot.data![index];
-                    var title = data.title;
+                return Expanded(
+                  child: ListView.builder(
+                    itemCount: snapshot.data!.length,
+                    itemBuilder: (context, index) {
+                      var data = snapshot.data![index];
+                      var title = data.title;
 
-                    return Padding(
-                      padding: const EdgeInsets.all(12),
-                      child: Text(title),
-                    );
-                  },
+                      return Container(
+                        padding: const EdgeInsets.all(14),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(title),
+                            const Divider(),
+                          ],
+                        ),
+                      );
+                    },
+                  ),
                 );
               })
         ],
-      ))),
+      )),
     );
   }
 }

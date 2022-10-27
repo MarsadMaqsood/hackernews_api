@@ -37,7 +37,7 @@ class HackerNews {
     return stories;
   }
 
-  ///Function used to access single story by using storyID
+  ///Function used to access single story by using [storyID]
   Future<Story> getStory(int storyID) async {
     http.Response response = await _getStory(storyID);
 
@@ -48,7 +48,7 @@ class HackerNews {
 
   ///Function used to access list of storyIds
   Future<List<dynamic>> getStoryIds() async {
-    final response = await http.get(storyUrl(newsType));
+    final response = await http.get(urlForStories(newsType));
 
     if (response.statusCode == 200) {
       dynamic storyIds = jsonDecode(response.body);
@@ -73,7 +73,7 @@ class HackerNews {
   }
 
   Future<List<http.Response>> _getStories() async {
-    final response = await http.get(storyUrl(newsType));
+    final response = await http.get(urlForStories(newsType));
 
     if (response.statusCode == 200) {
       Iterable storyIds = jsonDecode(response.body);
@@ -86,7 +86,7 @@ class HackerNews {
     }
   }
 
-  ///Function used to access single story by using storyID
+  ///Function used to access single story by using [storyId]
   Future<http.Response> _getStory(int storyId) {
     return http.get(urlForStory(storyId));
   }

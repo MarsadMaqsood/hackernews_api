@@ -1,7 +1,7 @@
 name: hackernews_api
 description: A Flutter package of Hacker News API for accessing top and new stories.
-version: 0.0.5
-homepage: https://github.com/MarsadMaqsood/hackernews_api.git
+version: 0.0.6
+homepage: https://github.com/MarsadMaqsood/hackernews_api
 
 environment:
   sdk: ">=2.16.2 <3.0.0"
@@ -10,7 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  http: ^0.13.4
+  http: ^0.13.5
 
 dev_dependencies:
   flutter_test:
