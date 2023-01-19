@@ -5,7 +5,7 @@ A Flutter package of Hacker News API for accessing top and new stories.
 ## ⭐ Installing
 ```
 dependencies:
-    updater: ^0.0.6
+    hackernews_api: ^0.0.6
 ```
 
 ## ⚡ Import 
